@@ -1,0 +1,17 @@
+{
+    "development": {
+      "username": "root",
+      "password": "password",
+      "database": "recipebox_db",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "g2qbjtur4aiqa3a1",
+      "password": "ugm2zrap37b7q091",
+      "database": "b90gjl303k9h4wkz",
+      "host": "gk90usy5ik2otcvi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "dialect": "mysql"
+    }
+  }
+

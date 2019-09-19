@@ -1,0 +1,45 @@
+<div class="smallForm">
+
+    {{#if login}}
+        {{#if loginError}}
+            <p>Oops. Looks like you've entered the wrong username/password. Please try again.</p>
+        {{/if}}
+            <form action="/logIn" method="POST" class="userAuth">
+            <h1 class="logIn">Log In</h1>
+    {{else}}
+        {{#if userExists}}
+            <p>This username already exists. Please try another.</p>
+        {{/if}}
+        <form action="/signUp" method="POST" class="userAuth">
+            <h1 class="signUp">Sign Up</h1>
+    {{/if}}
+
+            <div class="form-group">
+
+                <input type="email" class="form-control" name="userEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="password" class="form-control" name="userPass" placeholder="Password">
+
+                {{#if login}}
+                    <input class="btn btn-primary" id="submitLoginButton" type="submit" value="Log In">
+                    <p>Not yet a member? <a id="signUpButton" href="/" role="button">Sign Up!</a></p>
+                {{else}}
+                    <input class="btn btn-primary" id="submitSignupButton" type="submit" value="Sign Up">
+                    <p>Already a Member? <a id="signUpButton" href="/auth" role="button">Log In!</a></p>
+                {{/if}}
+
+            </div>
+
+    </form>    
+</div>
+
+
+
+
+<!-- if signing, make the form action a get request, if login, make post request -->
+<!-- create email input -->
+<!-- create password input -->
+<!-- submit button -->
+<!-- link to toggle sign in and log in -->
+
+
+{{!-- sam- create another page for adding a recipe --}}
